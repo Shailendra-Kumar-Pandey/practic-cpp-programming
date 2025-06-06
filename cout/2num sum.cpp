@@ -5,6 +5,6 @@ int main()
 {
     int a = 35, b = 50, sum;
     sum = a + b;
-    cout<< "Sum = %d"<< sum;
+    cout<<"a = "<< a <<"\nb = "<< b<<"\nSum = "<<sum;
     return 0;
 }
