@@ -1,12 +1,12 @@
-/* Write a Program to add two Numbers */
+/* Write a Program to Multiplication two Numbers */
 #include<iostream>
 using namespace std;
 int main()
 {
-    int a, b, add;
+    int a, b, multi;
     cout<<"Enter the Two Numbers : ";
     cin>>a>>b;
-    add = a + b;
-    cout<<"Sum = "<<add;
+    multi = a * b;
+    cout<<"Multiplication = "<<multi;
     return 0;
 }
