@@ -8,6 +8,6 @@ int main()
     cout<<"Enter the Three Numbers : ";
     cin>>a>>b>>c;
     avg = (a + b + c)/3.0;
-    cout<<"Multiplication = "<<avg;
+    cout<<"Average is = "<<avg;
     return 0;
 }
