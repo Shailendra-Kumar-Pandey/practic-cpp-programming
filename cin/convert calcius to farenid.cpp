@@ -3,6 +3,8 @@
 using namespace std;
 int main()
 {
-    float
+    float degree;
+    cout<<"Enter the temprature in Degree";
+    cin>>degree;
     return 0;
 }
