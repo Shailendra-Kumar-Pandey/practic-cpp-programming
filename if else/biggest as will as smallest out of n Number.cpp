@@ -9,16 +9,16 @@ int main()
     cout<<"Enter First Number :- ";
     cin>>small;
     big = small;
-    for(i = 0; i<=n; i ++)
+    for(i = 1; i<n; i ++)
     {
         cout<<"Enter next Number :- ";
         cin>>next;
         if(small>next)
             small = next;
         if(big<next)
-            big = nest;
+            big = next;
     }
-    cout<<"Biggest Number is = "<<big;
+    cout<<"Biggest Number is = "<<big<<endl;
     cout<<"Smallest Number is = "<<small;
     return 0;
 }
