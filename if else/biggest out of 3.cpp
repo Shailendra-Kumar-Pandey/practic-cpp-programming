@@ -1,4 +1,4 @@
-/* Write a program to calculate and print beggest out of 3 number */
+/* Write a program to calculate and print biggest out of 3 number */
 #include<iostream>
 using namespace std;
 int main()
@@ -13,5 +13,5 @@ int main()
             cout<<"Biggest Number is :- "<<b;
          else
             cout<<"Biggest Number is :- "<<c;
-    return 0:
+    return 0;
 }
