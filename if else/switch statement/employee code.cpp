@@ -24,6 +24,8 @@ int  main()
             }
         }while(ec!=3);
     total = male + female;
-    cout<<" Males = "cout<<male<<cout<<" Females = "<<cout<<female<<cout<<" \n Total = "<<cout<<total;
+    cout<<" Males = "<<male<<endl;
+    cout<<" Females = "<<female<<endl;
+    cout<<"Total = "<<total;
     return 0;
 }
