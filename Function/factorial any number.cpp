@@ -13,8 +13,8 @@ int main()
 }
 float factorial(float x)
 {
-    int f = 1,
+    int f = 1;
     while(x>0)
         f = f * x--;
-    return f;    
+    return f;
 }
