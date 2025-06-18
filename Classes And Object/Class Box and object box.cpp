@@ -1,7 +1,7 @@
-/* Write a Program to calculate and print volume of box, create Box and box oject  */
+/* Write a Program to calculate and print volume of box, create Box and box object  */
 #include<iostream>
 using namespace std;
-class Box           //Create Class and decliration, initilization 
+class Box           //Create Class and declaration, initialization
 {   public:
         double length;
         double breadth;
@@ -9,14 +9,14 @@ class Box           //Create Class and decliration, initilization
 };
 int main()
 {
-    Box box1;       // Object Create
+    Box box1;       // Object Create declaration
     Box box2;
     double volume_box = 0.0;
-    // Object initilizetion
+    // Object initialization
     box1.length = 5.0;
     box1.breadth = 6.0;
     box1.height = 7.0;
-    // Object initilizetion
+    // Object initialization
     box2.length = 11.0;
     box2.breadth = 16.0;
     box2.height = 17.0;
