@@ -1,0 +1,1 @@
+/* Write a program to calculate and print Simple Interest and find to member simple Interest */
