@@ -1,27 +1,27 @@
-/* Write a Program to calculate and print area and parimeter class and object rectrangal  */
+/* Write a Program to calculate and print area and perimeter class and object rectangale  */
 #include<iostream>
 using namespace std;
-class Rectrangal
+class Rectangale
 {   public:
         int length;
         int width;
 };
 int main()
 {
-    Rectrangal r1;
-    Rectrangal r2;
-    int area = 0, parimeter = 0;
+    Rectangale r1;
+    Rectangale r2;
+    int area = 0, perimeter = 0;
     r1.length = 120;
     r1.width = 80;
     r2.length = 100;
     r2.width = 60;
     area = r1.length * r1.width;
-    parimeter = 2 * (r1.length + r1.width);
-    cout<<"Area of Rectrangal R-1 = "<<area<<endl;
-    cout<<"Parimeter of Rectrangal R-1 = "<<parimeter<<endl;
+    perimeter = 2 * (r1.length + r1.width);
+    cout<<"Area of Rectangale R-1 = "<<area<<endl;
+    cout<<"Perimeter of Rectangale R-1 = "<<perimeter<<endl;
     area = r2.length * r2.width;
-    parimeter = 2 * (r2.length + r2.width);
-    cout<<"Area of Rectrangal R-2 = "<<area<<endl;
-    cout<<"Parimeter of Rectrangal R-2 = "<<parimeter<<endl;
+    perimeter = 2 * (r2.length + r2.width);
+    cout<<"Area of Rectangale R-2 = "<<area<<endl;
+    cout<<"Perimeter of Rectangale R-2 = "<<perimeter<<endl;
     return 0;
 }
