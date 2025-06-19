@@ -5,28 +5,27 @@ class Rectangale
 {   public:
         int length;
         int width;
-        void getarea();
-        void getperimeter();
-        int setlength(int l);
-        int setwidth(int w);
+        int getarea();
+        int getperimeter();
+        void setlength(int l);
+        void setwidth(int w);
 };
-void Rectangale::getarea()
+int Rectangale::getarea()
 {
     return length * width;
 }
-void Rectangale::getperimeter()
+int Rectangale::getperimeter()
 {
     return 2 * (length + width);
 }
-int Rectangale::setlength(int l)
+void Rectangale::setlength(int l)
 {
     length = l;
 }
-int Rectangale::setwidth(int w)
+void Rectangale::setwidth(int w)
 {
     width = w;
 }
-
 int main()
 {
     Rectangale r1;
@@ -38,10 +37,10 @@ int main()
     r2.setwidth(60);
     area = r1.getarea();
     perimeter = r1.getperimeter();
-    cout<<"Area of Rectangale R-1 = "<<area<<endl;
-    cout<<"Perimeter of Rectangale R-1 = "<<perimeter<<endl;
-    cout<<"Area of Rectangale R-2 = "<<r2.getarea()<<endl;
-    cout<<"Perimeter of Rectangale R-2 = "<<r2.getperimeter()<<endl;
+    cout<<"Area of Rectangle R-1 = "<<area<<endl;
+    cout<<"Perimeter of Rectangle R-1 = "<<perimeter<<endl;
+    cout<<"Area of Rectangle R-2 = "<<r2.getarea()<<endl;
+    cout<<"Perimeter of Rectangle R-2 = "<<r2.getperimeter()<<endl;
     return 0;
 }
 
