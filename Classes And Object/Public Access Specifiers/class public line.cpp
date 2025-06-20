@@ -1,4 +1,4 @@
-/* Write a Program to using public acces specifier */
+/* Write a Program to using public access specifier */
 #include<iostream>
 using namespace std;
 class Line {
@@ -9,7 +9,7 @@ public:
     double getLength() {
         return length;
     }
-};  
+};
 void Line::setLength(double l) {
     length = l;
 }
