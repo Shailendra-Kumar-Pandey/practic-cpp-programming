@@ -1,0 +1,1 @@
+/* Write a Program to using public acces specifier */
