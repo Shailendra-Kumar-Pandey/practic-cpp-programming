@@ -4,7 +4,7 @@ using namespace std;
 class Line {
 public:
     double length;
-    void setLength(double l);
+    void setLength(double l); // Function to set the length of the line
     // Function to get the length of the line
     double getLength() {
         return length;
