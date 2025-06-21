@@ -1,4 +1,4 @@
-/* Write to Program to print and create constractor function */
+/* Write to Program to print and create constructor function */
 #include<iostream>
 using namespace std;
 class Line
@@ -15,7 +15,7 @@ class Line
 };
 Line::Line(){
     length = 5.0;
-    cont<<"\n Create an Object automatic call Function...";
+    cout<<"\n Create an Object automatic call Constructor Function..."<<endl;
 }
 int main()
 {
