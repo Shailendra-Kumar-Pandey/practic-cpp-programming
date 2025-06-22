@@ -11,7 +11,7 @@ int main()
         for(j=2; j<i; j++)
         {
             if(i%j==0)
-                break;
+                break;         // Stop the loop if i is divisible by j
         }
         if(i==j)
         {
