@@ -1,4 +1,4 @@
-/* Write a program to class - Perameterial Constructor create */
+/* Write a program to class - Parameterizel Constructor create */
 #include <iostream>
 using namespace std;
 class Line {
