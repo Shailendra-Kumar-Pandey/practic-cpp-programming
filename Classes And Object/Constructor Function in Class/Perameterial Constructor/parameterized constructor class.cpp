@@ -1,10 +1,10 @@
-/* Write a program to class - Parameterizel Constructor create */
+/* Write a program to class - Parameterized Constructor create */
 #include <iostream>
 using namespace std;
 class Line {
     double length;
 public:
-    
+
     // Constructor with a parameter
     Line(double len);
     // Function to get the length
@@ -15,9 +15,9 @@ public:
         length = len;
     }
 };
-// Member function definition
+// Constructor function definition
 Line::Line(double len) {
-        cout << "Object created with length: " << length << endl;
+        cout << "Object created with length: " << len << endl;
         length = len;
     }
 int main() {
