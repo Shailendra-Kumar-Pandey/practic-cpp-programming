@@ -1,4 +1,4 @@
-/* Write a Program to calculate and Print - Construactor and Destructor */
+/* Write a Program to calculate and Print - Constructor and Destructor */
 #include <iostream>
 using namespace std;
 class Line {
