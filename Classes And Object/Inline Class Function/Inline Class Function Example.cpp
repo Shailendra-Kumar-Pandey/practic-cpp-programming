@@ -1,7 +1,7 @@
-/* Write a Program to Class - Inline Function */
+/* Write a Program to Class - In-line Function */
 #include<iostream>
 using namespace std;
-inline int Max(int a, int b) { //Inline function definition
+inline int Max(int a, int b) { //In-line function definition
     // This function returns the maximum of two integers
     return (a > b) ? a : b;
 }
