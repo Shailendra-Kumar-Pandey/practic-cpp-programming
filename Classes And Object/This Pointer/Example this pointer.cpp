@@ -7,7 +7,7 @@ class Box{
         double breadth;
         double height;
     public:
-    //Constructor Definition and inisilize
+    //Constructor Definition and initialize
         Box(double l= 2.0, double b = 2.0, double h = 2.0 )
         {
             cout<<"\n Constructor Call...";
@@ -19,14 +19,14 @@ class Box{
         {
             return length * breadth * height;
         }
-        void Compare(Box b2)
+        bool Compare(Box b2)
         {
-            return this->Volume()>b2.Volume();
+            return this->Volume() > b2.Volume();
         }
 };
 int main()
 {
-    Box box1(3.0, 2.0,4.0);    
+    Box box1(3.0, 2.0,4.0);
     Box box2(10.0, 4.0, 8.0);
 
     if (box1.Compare(box2))
