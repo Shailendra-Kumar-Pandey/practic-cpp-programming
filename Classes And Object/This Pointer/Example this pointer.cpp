@@ -26,8 +26,8 @@ class Box{
 };
 int main()
 {
-    Box box1(3.0, 2.0,4.0);         // Declare Box1
-    Box box2(10.0, 4.0, 8.0);       // Declare Box2
+    Box box1(3.0, 2.0,4.0);         // Declare Box-1
+    Box box2(10.0, 4.0, 8.0);       // Declare Box-2
 
     if (box1.Compare(box2))
     {
