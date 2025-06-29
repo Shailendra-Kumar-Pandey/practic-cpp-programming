@@ -1,0 +1,1 @@
+/* Write a Program to read students information using two classes and inheritance. Base class should have following basic info Name, Age, Gender and member functions to accept and display. Derived class Should have Total marks, Grade and member function to accept and display */
