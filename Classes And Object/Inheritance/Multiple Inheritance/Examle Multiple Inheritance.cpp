@@ -14,7 +14,7 @@ class Shape {
             height = h;
         }
     };
- // Base class 2
+ // Base class 2 Painting Cost
  class Cost{
     public:
         double getCost(double area) {
