@@ -1,4 +1,4 @@
-/* Write a Program to class - Overriding Inheritance */
+/* Write a Program to Method 01 class - Overriding Inheritance */
 #include <iostream>
 using namespace std;
 class Base {
