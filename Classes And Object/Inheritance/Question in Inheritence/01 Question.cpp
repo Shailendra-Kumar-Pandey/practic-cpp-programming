@@ -11,7 +11,6 @@ class Marks : public Student {
 private:
     int totalMarks;
     char grade;
-
 public:
     void accept() {
         cout << "Enter Name: ";
