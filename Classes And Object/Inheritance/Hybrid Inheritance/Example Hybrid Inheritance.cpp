@@ -9,14 +9,14 @@ class Animal {
         }
 };
 // Derived class 1
-class Dog : public Animal {
+class Dog : public virtual Animal {
     public:
         void bark() {
             cout << "Barking..." << endl;
         }
 };
 // Derived class 2
-class Cat : public Animal {
+class Cat : public virtual Animal {
     public:
         void meow() {
             cout << "Meowing..." << endl;
