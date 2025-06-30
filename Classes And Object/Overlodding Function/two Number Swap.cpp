@@ -12,7 +12,7 @@ class Swap{
         }
     // Overloaded function to swap two doubles
         void swap(double a, double b){
-                int temp = a;
+                double temp = a;
                 a = b;
                 b = temp;
                 cout <<a<< " "<<b<< endl;
