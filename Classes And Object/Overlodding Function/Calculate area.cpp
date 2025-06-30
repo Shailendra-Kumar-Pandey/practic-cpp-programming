@@ -6,7 +6,7 @@ To Calculate Area Menu
 3) Area of Triangle
 4) Area of Square
 5) Exit
-Enter your choice (1-5): 
+Enter your choice (1-5):
 */
 #include<iostream>
 using namespace std;
@@ -21,7 +21,7 @@ class Area
     {
         return l * b;
     }
-    float area(float b, float h) // Area of Triangle
+    float area(int b, int h) // Area of Triangle
     {
         return 0.5 * b * h;
     }
@@ -49,46 +49,46 @@ int main()
         case 1:
             {
                 float radius;
-                cout << "Enter radius of Circle: ";
+                cout << "\nEnter radius of Circle: ";
                 cin >> radius;
-                cout << "Area of Circle: " << a.area(radius) << endl;
+                cout << "\nArea of Circle: " << a.area(radius) << endl;
             }
             break;
         case 2:
             {
                 float length, breadth;
-                cout << "Enter length and breadth of Rectangle: ";
+                cout << "\nEnter length and breadth of Rectangle: ";
                 cin >> length >> breadth;
-                cout << "Area of Rectangle: " << a.area(length, breadth) << endl;
+                cout << "\nArea of Rectangle: " << a.area(length, breadth) << endl;
             }
             break;
         case 3:
             {
                 float base, height;
-                cout << "Enter base and height of Triangle: ";
+                cout << "\nEnter base and height of Triangle: ";
                 cin >> base >> height;
-                cout << "Area of Triangle: " << a.area(base, height) << endl;
+                cout << "\nArea of Triangle: " << a.area(base, height) << endl;
             }
             break;
         case 4:
             {
                 int side;
-                cout << "Enter side of Square: ";
+                cout << "\nEnter side of Square: ";
                 cin >> side;
-                cout << "Area of Square: " << a.area(side) << endl;
+                cout << "\nArea of Square: " << a.area(side) << endl;
             }
             break;
         case 5:
-            cout << "Exiting the program." << endl;
+            cout << "\nExiting the program." << endl;
         default:
             if (choice < 1 || choice > 5)
             {
-                cout << "Invalid choice! Please enter a number between 1 and 5." << endl;
-            }           
+                cout << "\nInvalid choice! Please enter a number between 1 and 5.\n" << endl;
+            }
             break;
         }
     }while (choice != 5);
-    cout << "Thank you for using the area calculator!" << endl;
+    cout << "\nThank you for using the area calculator!\n" << endl;
     // Return 0 to indicate successful execution
     return 0;
 }
