@@ -13,21 +13,21 @@ using namespace std;
 class Area
 {
     public:
-    float area(float radius) // Area of Circle
+    float area(float r) // Area of Circle
     {
-        return 3.14 * radius * radius;
+        return 3.14 * r * r;
     }
-    float area(float length, float breadth) // Area of Rectangle
+    float area(float l, float b) // Area of Rectangle
     {
-        return length * breadth;
+        return l * b;
     }
-    float area(float base, float height) // Area of Triangle
+    float area(float b, float h) // Area of Triangle
     {
-        return 0.5 * base * height;
+        return 0.5 * b * h;
     }
-    float area(int side) // Area of Square
+    float area(int s) // Area of Square
     {
-        return side * side;
+        return s * s;
     }
 };
 int main()
