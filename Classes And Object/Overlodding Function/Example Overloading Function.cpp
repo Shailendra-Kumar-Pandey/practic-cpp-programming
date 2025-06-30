@@ -1,7 +1,7 @@
-/* Write a program to class - Overloadding Function */
+/* Write a program to class - Overloading Function */
 #include<iostream>
 using namespace std;
-class PrintData         // Create class and member function , initilize and Defination
+class PrintData         // Create class and member function , initialize and Definition
 {
     public:
         void print(int i){
@@ -11,9 +11,17 @@ class PrintData         // Create class and member function , initilize and Defi
             cout<<"\n Printing Float... "<<f<<endl;
         }
         void print(char *c){
-            cout<<"\n Printing Charecter... "<<c<<endl;
+            cout<<"\n Printing Character... "<<c<<endl;
         }
+        PrintData();        // Constructor Create
+        ~PrintData();       // Destructor Create
 };
+PrintData::PrintData(){             //Constructor Definition
+     cout<<"\n Object is Being Create..."<<endl;
+}
+PrintData::~PrintData(){            //Destructor Definition
+    cout<<"\n Object is Being Deleted..."<<endl;
+}
 int main()
 {
     PrintData pd;       // Create Object
