@@ -1,4 +1,7 @@
-/* Write a Program to read and print students information using two base classes and derived class. Base class1 should have basic info Name,Gender and marks of 5 subjects. Base class2 should have info like Total Marks and Percent. Both base classes should contain member functions to accept and display. Derived class should have grade and member function to calculate accept and display. */
+/* Write a Program to read and print students information using two base classes and derived class.
+ Base class1 should have basic info Name,Gender and marks of 5 subjects. Base class2 should have info like Total Marks and Percent.
+  Both base classes should contain member functions to accept and display. Derived class should have grade and member function to
+  calculate accept and display. */
 #include <iostream>
 #include <string>
 using namespace std;
