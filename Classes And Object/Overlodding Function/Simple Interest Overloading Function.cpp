@@ -2,7 +2,7 @@
 To calculate and print simple interest. Consider overloaded function with a name
 simple_interest(int p, int t, int r), simple_interest(int p, int t).
 */
-/* #include<iostream>
+ #include<iostream>
 using namespace std;
 class SimpleInterest
 {
@@ -17,10 +17,10 @@ class SimpleInterest
 };
 int main(){
     SimpleInterest si;
-    si.Simple_Interest(5000, 12, 7);
-    si.Simple_Interest(10000, 5);
+    cout<<"Simple Interest : "<<si.Simple_Interest(5000, 12, 7)<<endl;
+    cout<<"\nWithout rate Simple Interest : "<<si.Simple_Interest(10000, 5)<<endl;
     return 0;
-}*/
+}/*
 
 #include <iostream>
 using namespace std;
@@ -53,4 +53,4 @@ int main() {
     cout << "Simple Interest without rate: " << interest_without_rate << endl;
 
     return 0;
-}   
+}   */
