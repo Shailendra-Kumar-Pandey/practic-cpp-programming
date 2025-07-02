@@ -2,23 +2,28 @@
 To calculate and print simple interest. Consider overloaded function with a name
 simple_interest(int p, int t, int r), simple_interest(int p, int t).
 */
-#include<iostream>
+/* #include<iostream>
 using namespace std;
-<<<<<<< HEAD
 class SimpleInterest
 {
-    //int rate;
     public:
         int Simple_Interest(int p, int t, int r){
-            return (p*t*r)/100;
+            return (p * t * r) / 100.0;
         }
-       // void setRate(int r){
-       //     rate = r;
-       // }
         int Simple_Interest(int p, int t){
-            return (p*t)/100;
+            int r = 5; // Default rate of interest
+            return (p * t) / 100.0;
         }
-=======
+};
+int main(){
+    SimpleInterest si;
+    si.Simple_Interest(5000, 12, 7);
+    si.Simple_Interest(10000, 5);
+    return 0;
+}*/
+
+#include <iostream>
+using namespace std;
 class SimpleInterest {
 public:
     // Function to calculate simple interest with rate
@@ -30,15 +35,9 @@ public:
         float default_rate = 5.0; // Default rate of interest
         return (p * t * default_rate) / 100.0;
     }
->>>>>>> 96d3b59e8cbf52df852a07f953be1ce033e8fdaf
-};
-int main(){
+};  
+int main() {
     SimpleInterest si;
-<<<<<<< HEAD
-   // si.setRate(5);
-    si.Simple_Interest(5000,12,7);
-    si.Simple_Interest(10000,5);
-=======
     int principal, time, rate;
 
     // Input for simple interest with rate
@@ -53,6 +52,5 @@ int main(){
     float interest_without_rate = si.simple_interest(principal, time);
     cout << "Simple Interest without rate: " << interest_without_rate << endl;
 
->>>>>>> 96d3b59e8cbf52df852a07f953be1ce033e8fdaf
     return 0;
-}
+}   
