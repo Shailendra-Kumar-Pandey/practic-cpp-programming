@@ -1,0 +1,1 @@
+/* Write a Program to demonstrate hierarchical inheritance to get squar, cube and factorial of a number. Base class should have folloing info, Number and member function to accept number. Derived class 1 should find square. Derived class 2 should find cube, derived class 3 shuld find factorial. */
