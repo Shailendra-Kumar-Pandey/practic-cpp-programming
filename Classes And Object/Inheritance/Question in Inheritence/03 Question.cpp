@@ -1,4 +1,4 @@
-/* Write a Program to demonstrate hierarchical inheritance to get squar, cube and factorial of a number. Base class should have folloing info, Number and member function to accept number. Derived class 1 should find square. Derived class 2 should find cube, derived class 3 shuld find factorial. */
+/* Write a Program to demonstrate hierarchical inheritance to get square, cube and factorial of a number. Base class should have following info, Number and member function to accept number. Derived class 1 should find square. Derived class 2 should find cube, derived class 3 should find factorial. */
 #include <iostream>
 using namespace std;
 class Number {
