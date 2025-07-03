@@ -17,6 +17,13 @@ class SimpleInterest
 };
 int main(){
     SimpleInterest si;
+    int principal, time, rate;
+    cout<<"\nEnter Principal, Time and Rate : "<<endl;
+    cin>>principal>>time>>rate;
+    cout<<"\nSimple Interest : "<<si.Simple_Interest(principal, time,rate)<<endl;
+    cout<<"\nEnter Principal and Time : "<<endl;
+    cin>>principal>>time;
+    cout<<"\nWithout rate Simple Interest : "<<si.Simple_Interest(principal, time)<<endl;
     cout<<"Simple Interest : "<<si.Simple_Interest(5000, 12, 7)<<endl;
     cout<<"\nWithout rate Simple Interest : "<<si.Simple_Interest(10000, 5)<<endl;
     return 0;
@@ -35,7 +42,7 @@ public:
         float default_rate = 5.0; // Default rate of interest
         return (p * t * default_rate) / 100.0;
     }
-};  
+};
 int main() {
     SimpleInterest si;
     int principal, time, rate;
