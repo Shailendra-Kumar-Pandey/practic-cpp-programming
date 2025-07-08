@@ -12,9 +12,9 @@ class Shape         // Base Class
             width = w;
             height = h;
         }
-        int area()
+        virtual int area()
         {
-            cout << "\nParent Class Area " << endl;
+            cout << "\nParent Class Area ";
             return 0;
         }
 };
@@ -27,7 +27,7 @@ class Rectangle : public Shape  // Derived Class
         }
         int area()  // Override area method
         {
-            cout << "\nRectangle Class Area " << endl;
+            cout << "\nRectangle Class Area ";
             return width * height;  // Calculate area of rectangle
         }
 };
@@ -40,7 +40,7 @@ class Triangle : public Shape  // Derived Class
         }
         int area()  // Override area method
         {
-            cout << "\nTriangle Class Area " << endl;
+            cout << "\nTriangle Class Area ";
             return (width * height / 2);  // Calculate area of rectangle
         }
 };
