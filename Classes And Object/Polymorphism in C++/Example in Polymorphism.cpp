@@ -1,7 +1,7 @@
 /* Write a Program to Class - Polymorphism in c++ */
 #include <iostream>
 using namespace std;
-class Shape         // Base Class 
+class Shape         // Base Class
 {
     protected:
         int width;
@@ -14,16 +14,16 @@ class Shape         // Base Class
         }
         int area()
         {
-            cout << "\nPerent Class Area " << endl;
+            cout << "\nParent Class Area " << endl;
             return 0;
-        }      
+        }
 };
 class Rectangle : public Shape  // Derived Class
 {
     public:
-        Rectangle(int a = 0, int b = 0) 
+        Rectangle(int a = 0, int b = 0) : Shape(a, b)
         {
-             Shape(a, b);  // Call base class constructor
+            // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
@@ -34,9 +34,9 @@ class Rectangle : public Shape  // Derived Class
 class Triangle : public Shape  // Derived Class
 {
     public:
-        Triangle(int a = 0, int b = 0) 
+        Triangle(int a = 0, int b = 0) : Shape(a, b)
         {
-             Shape(a, b);  // Call base class constructor
+            // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
