@@ -12,7 +12,7 @@ class Shape         // Base Class
             width = w;
             height = h;
         }
-        virtual int area()
+        virtual int area()  // Virtual function for area
         {
             cout << "\nParent Class Area ";
             return 0;
