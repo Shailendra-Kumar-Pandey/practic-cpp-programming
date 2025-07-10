@@ -7,7 +7,7 @@ class Shape         // Base Class
         int width;
         int height;
     public:
-        Shape(int w, int h)
+        Shape(int w = 0, int h = 0)
         {
             width = w;
             height = h;
@@ -21,9 +21,9 @@ class Shape         // Base Class
 class Rectangle : public Shape  // Derived Class
 {
     public:
-        Rectangle(int a = 0, int b = 0) : Shape(a, b)
+        Rectangle(int a = 0, int b = 0)
         {
-            // Base class constructor called in initializer list
+           Shape(a, b); // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
@@ -34,9 +34,9 @@ class Rectangle : public Shape  // Derived Class
 class Triangle : public Shape  // Derived Class
 {
     public:
-        Triangle(int a = 0, int b = 0) : Shape(a, b)
+        Triangle(int a = 0, int b = 0) 
         {
-            // Base class constructor called in initializer list
+            Shape(a, b);    // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
