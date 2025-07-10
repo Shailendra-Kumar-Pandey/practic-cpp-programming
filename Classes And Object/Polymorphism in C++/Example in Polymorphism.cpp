@@ -12,7 +12,7 @@ class Shape         // Base Class
             width = w;
             height = h;
         }
-        virtual int area()  // Virtual function for area
+        int area()  // Virtual function for area
         {
             cout << "\nParent Class Area ";
             return 0;
@@ -34,7 +34,7 @@ class Rectangle : public Shape  // Derived Class
 class Triangle : public Shape  // Derived Class
 {
     public:
-        Triangle(int a = 0, int b = 0) 
+        Triangle(int a = 0, int b = 0)
         {
             Shape(a, b);    // Base class constructor called in initializer list
         }
