@@ -7,7 +7,7 @@ class Shape         // Base Class
         int width;
         int height;
     public:
-        Shape(int w = 0, int h = 0)
+        Shape(int w, int h)
         {
             width = w;
             height = h;
@@ -21,9 +21,8 @@ class Shape         // Base Class
 class Rectangle : public Shape  // Derived Class
 {
     public:
-        Rectangle(int a = 0, int b = 0)
+        Rectangle(int a, int b) : Shape(a, b)
         {
-           Shape(a, b); // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
@@ -34,9 +33,8 @@ class Rectangle : public Shape  // Derived Class
 class Triangle : public Shape  // Derived Class
 {
     public:
-        Triangle(int a = 0, int b = 0)
+        Triangle(int a, int b) : Shape(a, b)
         {
-            Shape(a, b);    // Base class constructor called in initializer list
         }
         int area()  // Override area method
         {
@@ -52,9 +50,7 @@ int main()
     Triangle tri(10, 5);  // Create Triangle object
 
     s = &rec;  // Point to Rectangle object
-    int z =0;
-    z = s->area();  // s->area();
-    cout << "Area of Rectangle: " << z << endl;  // Call area method
+    cout << "Area of Rectangle: " << s->area() << endl;  // Call area method
 
     s = &tri;  // Point to Triangle object
     cout << "Area of Triangle: " << s->area() << endl;  // Call area method
