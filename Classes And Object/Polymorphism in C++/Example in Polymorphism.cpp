@@ -12,10 +12,10 @@ class Shape         // Base Class
             width = w;
             height = h;
         }
-        int area()  // Virtual function for area
+        virtual int area() // Virtual function for area
         {
-            cout << "\nParent Class Area ";
-            return 0;
+          cout << "\nParent Class Area "<<endl;
+          return 0;
         }
 };
 class Rectangle : public Shape  // Derived Class
@@ -27,7 +27,7 @@ class Rectangle : public Shape  // Derived Class
         }
         int area()  // Override area method
         {
-            cout << "\nRectangle Class Area ";
+            cout << "\nRectangle Class Area "<<endl;
             return width * height;  // Calculate area of rectangle
         }
 };
@@ -40,21 +40,24 @@ class Triangle : public Shape  // Derived Class
         }
         int area()  // Override area method
         {
-            cout << "\nTriangle Class Area ";
-            return (width * height / 2);  // Calculate area of rectangle
+            cout << "\nTriangle Class Area " << endl;
+            int a = (width * height / 2);
+            return  a; // Calculate area of rectangle
         }
 };
 int main()
 {
-    Shape *shape;  // Base class pointer
+    Shape *s;  // Base class pointer
     Rectangle rec(10, 7);  // Create Rectangle object
     Triangle tri(10, 5);  // Create Triangle object
 
-    shape = &rec;  // Point to Rectangle object
-    cout << "Area of Rectangle: " << shape->area() << endl;  // Call area method
+    s = &rec;  // Point to Rectangle object
+    int z =0;
+    z = s->area();  // s->area();
+    cout << "Area of Rectangle: " << z << endl;  // Call area method
 
-    shape = &tri;  // Point to Triangle object
-    cout << "Area of Triangle: " << shape->area() << endl;  // Call area method
+    s = &tri;  // Point to Triangle object
+    cout << "Area of Triangle: " << s->area() << endl;  // Call area method
 
     return 0;
 }
