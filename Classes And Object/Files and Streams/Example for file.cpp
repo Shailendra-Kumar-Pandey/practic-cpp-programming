@@ -9,7 +9,7 @@ int main()
     ofstream obj;       // Create an object of of stream class
     obj.open("data.dat");  // Open a file in write mode
 
-    cout<<"\nEnter the detailes..."<<endl;
+    cout<<"\nEnter the details..."<<endl;
     cout<<"\nEnter your name: ";
     cin.getline(data, 100);     // Read a line of text from the user
     obj<<data<<endl;        // Write the name to the file
@@ -24,16 +24,16 @@ int main()
     // Now, read the data back from the file
     ifstream obj1;
     obj1.open("data.dat");  // Open the file in read mode
-    
-    obj1>>data;  // Read the name from the file
-    cout<<data<<endl;
 
     obj1>>data;  // Read the name from the file
     cout<<data<<endl;
 
     obj1>>data;  // Read the name from the file
     cout<<data<<endl;
-    
+
+    obj1>>data;  // Read the name from the file
+    cout<<data<<endl;
+
     obj1.close();  // Close the file
     return 0;
 }
