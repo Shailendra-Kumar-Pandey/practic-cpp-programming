@@ -21,5 +21,18 @@ int main()
 
     obj.close();        // Close the file
 
+    // Now, read the data back from the file
+    ifstream obj1;
+    obj1.open("data.dat");  // Open the file in read mode
+    
+    obj1>>data;  // Read the name from the file
+    cout<<data;
+
+    obj1>>data;  // Read the name from the file
+    cout<<data;
+
+    obj1>>data;  // Read the name from the file
+    cout<<data;
+    obj1.close();  // Close the file
     return 0;
 }
