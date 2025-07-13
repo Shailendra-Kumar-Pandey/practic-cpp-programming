@@ -26,13 +26,14 @@ int main()
     obj1.open("data.dat");  // Open the file in read mode
     
     obj1>>data;  // Read the name from the file
-    cout<<data;
+    cout<<data<<endl;
 
     obj1>>data;  // Read the name from the file
-    cout<<data;
+    cout<<data<<endl;
 
     obj1>>data;  // Read the name from the file
-    cout<<data;
+    cout<<data<<endl;
+    
     obj1.close();  // Close the file
     return 0;
 }
