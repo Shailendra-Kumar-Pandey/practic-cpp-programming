@@ -25,15 +25,25 @@ int main()
     ifstream obj1;
     obj1.open("data.dat");  // Open the file in read mode
 
-    obj1>>data;  // Read the name from the file
-    cout<<data<<endl;
+    if (!obj1) {        // Check if the file opened successfully
+        cerr << "Error opening file!" << endl;  // Output error message if file cannot be opened
+        return 1;
+    }
+    cout<<"\nData read from file:"<<endl;
+    while (obj1.getline(data, 100)) {  // Read each line from the file
+        cout << data << endl;  // Output the line to the console
+    }
 
-    obj1>>data;  // Read the name from the file
-    cout<<data<<endl;
+    // obj1>>data;  // Read the name from the file
+    // cout<<data<<endl;
 
-    obj1>>data;  // Read the name from the file
-    cout<<data<<endl;
+    // obj1>>data;  // Read the name from the file
+    // cout<<data<<endl;
 
+    // obj1>>data;  // Read the name from the file
+    // cout<<data<<endl;
+
+    
     obj1.close();  // Close the file
     return 0;
 }
