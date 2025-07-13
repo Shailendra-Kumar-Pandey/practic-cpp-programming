@@ -1,4 +1,4 @@
-/* Write a Program to File and exiest file to append */
+/* Write a Program to File and exist file to append */
 
 #include<iostream>
 #include<fstream>
