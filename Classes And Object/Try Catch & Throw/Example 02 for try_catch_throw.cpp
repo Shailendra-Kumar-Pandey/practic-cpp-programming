@@ -1,0 +1,1 @@
+/* Write a progam to usig try and catch and throw */
