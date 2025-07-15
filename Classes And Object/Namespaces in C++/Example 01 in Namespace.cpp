@@ -1,0 +1,1 @@
+/* Write a program to using namespace program */
