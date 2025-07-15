@@ -1,4 +1,4 @@
-//using namespace
+//using namespace Example
 #include <iostream>
 using namespace std;
 namespace first
