@@ -1,4 +1,4 @@
-/* Write a program to using namespace */
+    //namespaces
 #include <iostream>
 using namespace std;
 namespace first
