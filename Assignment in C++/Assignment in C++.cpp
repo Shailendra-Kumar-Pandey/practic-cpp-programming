@@ -10,4 +10,16 @@
             4) Display Employee
             5) Salary Register
             6) Exit
+
+        Enter your choice (1-6): ___
+
+&
+
+using this content-
+
+             Salary Register
+
+Emp No.     Name       Bsalary      Allowances        Deductions       Net Salary
+
+
 */
