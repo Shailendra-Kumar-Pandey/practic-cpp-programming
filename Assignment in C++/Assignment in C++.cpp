@@ -23,3 +23,34 @@ Emp No.     Name       Bsalary      Allowances        Deductions       Net Salar
 
 
 */
+#include<iostream>
+#include<fstream>
+using namespace std;
+class Employee
+{
+    private:
+        int employeeCode;
+        char employeeName[30];
+        double bSalary;
+        double allowances;
+        double deductions;
+        double netSalary;
+    public:
+
+};
+int main()
+{
+    Employee e1;
+
+    ofstream edata;
+    edata.open("edata.dat");
+
+    int choice = 0;
+
+    do{
+
+
+    }while(choice!=6);
+
+    return 0;
+}
