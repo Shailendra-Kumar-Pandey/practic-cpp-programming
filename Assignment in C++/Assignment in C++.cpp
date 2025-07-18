@@ -36,50 +36,49 @@ class Employee
         double deductions;
         double netSalary;
     public:
-        void setEmployeeCode(int code) 
+        void setEmployeeCode(int code)
         {
-             employeeCode = code; 
+             employeeCode = code;
         }
-        int getEmployeeCode() const 
-        { 
-            return employeeCode; 
+        int getEmployeeCode() const
+        {
+            return employeeCode;
         }
-        void setEmployeeName(const char *name) 
-        { 
-            strncpy(employeeName, name, sizeof(employeeName) - 1); 
-            employeeName[sizeof(employeeName) - 1] = '\0'; 
+        void setEmployeeName(const char *name)
+        {
+
         }
-        const char* getEmployeeName() const 
-        { 
-            return employeeName; 
+        const char* getEmployeeName() const
+        {
+            return employeeName;
         }
-        void setBSalary(double salary) 
-        { 
-            bSalary = salary; 
+        void setBSalary(double salary)
+        {
+            bSalary = salary;
         }
-        double getBSalary() const 
-        { 
-            return bSalary; 
+        double getBSalary() const
+        {
+            return bSalary;
         }
-        void setAllowances(double allowance) 
-        { 
-            allowances = allowance; 
+        void setAllowances(double allowance)
+        {
+            allowances = allowance;
         }
-        double getAllowances() const 
-        { 
-            return allowances; 
+        double getAllowances() const
+        {
+            return allowances;
         }
-        void setDeductions(double deduction) 
-        { 
-            deductions = deduction; 
+        void setDeductions(double deduction)
+        {
+            deductions = deduction;
         }
-        double getDeductions() const 
-        { 
-            return deductions; 
+        double getDeductions() const
+        {
+            return deductions;
         }
-        void calculateNetSalary() 
-        { 
-            netSalary = bSalary + allowances - deductions; 
+        void calculateNetSalary()
+        {
+            netSalary = bSalary + allowances - deductions;
         }
 };
 int main()
@@ -90,6 +89,7 @@ int main()
     edata.open("edata.dat");
 
     int choice = 0;
+    int code = 0;
 
     do{
         cout<< "ABC Co. Pvt. Ltd Nagpur \n";
@@ -107,20 +107,21 @@ int main()
         case 1:
             cout << "Adding Employee...\n";
             cout << "Enter Employee Code (using 1 to 1000 ): ";
-            cin >> e1.employeeCode;
+            cin >> code;
+            e1.setEmployeeCode(code);
             cout << "Enter Employee Name: ";
             cin.ignore(); // Clear the newline character from the input buffer
-            cin.getline(e1.employeeName, 30);
-            cout << "Enter Basic Salary: ";
-            cin >> e1.bSalary;
-            cout << "Enter Allowances: ";
-            cin >> e1.allowances;
-            cout << "Enter Deductions: ";
-            cin >> e1.deductions;
-            e1.netSalary = e1.bSalary + e1.allowances - e1.deductions;
-            edata << e1.employeeCode << " " << e1.employeeName << " "
-                  << e1.bSalary << " " << e1.allowances << " "
-                  << e1.deductions << " " << e1.netSalary << endl;
+           // cin.getline(e1.employeeName, 30);
+            //cout << "Enter Basic Salary: ";
+            //cin >> e1.bSalary;
+            //cout << "Enter Allowances: ";
+            //cin >> e1.allowances;
+            //cout << "Enter Deductions: ";
+            //cin >> e1.deductions;
+            //e1.netSalary = e1.bSalary + e1.allowances - e1.deductions;
+            //edata << e1.employeeCode << " " << e1.employeeName << " "
+              //    << e1.bSalary << " " << e1.allowances << " "
+                //  << e1.deductions << " " << e1.netSalary << endl;
             cout << "Employee added successfully!\n";
             break;
         case 2:
