@@ -61,7 +61,12 @@ int main()
         switch (choice)
         {
         case 1:
-
+            cout << "Adding Employee...\n";
+            cout << "Enter Employee Code: ";
+            cin >> e1.employeeCode;
+            cout << "Enter Employee Name: ";
+            cin.ignore(); // Clear the newline character from the input buffer
+            cin.getline(e1.employeeName, 30);
             break;
         case 2:
 
@@ -76,10 +81,15 @@ int main()
 
             break;
         case 6:
-
+            if(choice<0 || choice>6)
+            {
+                cout << "Invalid choice! Please enter a number between 1 and 6.\n";
+                continue;
+            }
+            cout << "Exiting the program.\n";
             break;
         default:
-            //if()
+            cout << "Invalid choice! Please enter a number between 1 and 6.\n";
             break;
         }
     }while(choice!=6);
