@@ -36,7 +36,51 @@ class Employee
         double deductions;
         double netSalary;
     public:
-
+        void setEmployeeCode(int code) 
+        {
+             employeeCode = code; 
+        }
+        int getEmployeeCode() const 
+        { 
+            return employeeCode; 
+        }
+        void setEmployeeName(const char *name) 
+        { 
+            strncpy(employeeName, name, sizeof(employeeName) - 1); 
+            employeeName[sizeof(employeeName) - 1] = '\0'; 
+        }
+        const char* getEmployeeName() const 
+        { 
+            return employeeName; 
+        }
+        void setBSalary(double salary) 
+        { 
+            bSalary = salary; 
+        }
+        double getBSalary() const 
+        { 
+            return bSalary; 
+        }
+        void setAllowances(double allowance) 
+        { 
+            allowances = allowance; 
+        }
+        double getAllowances() const 
+        { 
+            return allowances; 
+        }
+        void setDeductions(double deduction) 
+        { 
+            deductions = deduction; 
+        }
+        double getDeductions() const 
+        { 
+            return deductions; 
+        }
+        void calculateNetSalary() 
+        { 
+            netSalary = bSalary + allowances - deductions; 
+        }
 };
 int main()
 {
@@ -62,11 +106,22 @@ int main()
         {
         case 1:
             cout << "Adding Employee...\n";
-            cout << "Enter Employee Code: ";
+            cout << "Enter Employee Code (using 1 to 1000 ): ";
             cin >> e1.employeeCode;
             cout << "Enter Employee Name: ";
             cin.ignore(); // Clear the newline character from the input buffer
             cin.getline(e1.employeeName, 30);
+            cout << "Enter Basic Salary: ";
+            cin >> e1.bSalary;
+            cout << "Enter Allowances: ";
+            cin >> e1.allowances;
+            cout << "Enter Deductions: ";
+            cin >> e1.deductions;
+            e1.netSalary = e1.bSalary + e1.allowances - e1.deductions;
+            edata << e1.employeeCode << " " << e1.employeeName << " "
+                  << e1.bSalary << " " << e1.allowances << " "
+                  << e1.deductions << " " << e1.netSalary << endl;
+            cout << "Employee added successfully!\n";
             break;
         case 2:
 
