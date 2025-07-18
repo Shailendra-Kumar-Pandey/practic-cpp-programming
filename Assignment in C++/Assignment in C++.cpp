@@ -90,6 +90,10 @@ int main()
 
     int choice = 0;
     int code = 0;
+    char name;
+    double bs = 0.0;
+    double alowns = 0.0;
+    double dd = 0.0;
 
     do{
         cout<< "ABC Co. Pvt. Ltd Nagpur \n";
@@ -111,17 +115,18 @@ int main()
             e1.setEmployeeCode(code);
             cout << "Enter Employee Name: ";
             cin.ignore(); // Clear the newline character from the input buffer
-           // cin.getline(e1.employeeName, 30);
-            //cout << "Enter Basic Salary: ";
-            //cin >> e1.bSalary;
-            //cout << "Enter Allowances: ";
-            //cin >> e1.allowances;
-            //cout << "Enter Deductions: ";
-            //cin >> e1.deductions;
-            //e1.netSalary = e1.bSalary + e1.allowances - e1.deductions;
-            //edata << e1.employeeCode << " " << e1.employeeName << " "
-              //    << e1.bSalary << " " << e1.allowances << " "
-                //  << e1.deductions << " " << e1.netSalary << endl;
+            cin.getline(edata, 30);
+            e1.setEmployeeName(name);
+            cout << "Enter Basic Salary: ";
+            cin >> bs;
+            e1.setBSalary(bs);
+            cout << "Enter Allowances: ";
+            cin >> alowns;
+            e1.setAllowances(alowns);
+            cout << "Enter Deductions: ";
+            cin >> dd;
+            e1.setDeductions(dd);
+            edata<< e1.setEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.calculateNetSalary()<< endl;
             cout << "Employee added successfully!\n";
             break;
         case 2:
