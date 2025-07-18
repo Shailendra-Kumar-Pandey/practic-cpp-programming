@@ -48,8 +48,40 @@ int main()
     int choice = 0;
 
     do{
+        cout<< "ABC Co. Pvt. Ltd Nagpur \n";
+        cout<< "Employee Management System -\n";
+        cout<< "---MENU---\n";
+        cout << " 1) Add Employee \n";
+        cout << " 2) Edit Employee\n";
+        cout << " 3) Delete Employee\n";
+        cout << " 4) Display Employee\n";
+        cout << " 5) Salary Register\n";
+        cout << " 6) Exit\n";
+        cout << "Enter your choice (1-6) : ";
+        switch (choice)
+        {
+        case 1:
 
+            break;
+        case 2:
 
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+
+            break;
+        default:
+            //if()
+            break;
+        }
     }while(choice!=6);
 
     return 0;
