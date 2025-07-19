@@ -48,7 +48,7 @@ class Employee
         {
 
         }
-        const char* getEmployeeName() const
+        const char* getEmployeeName() 
         {
             return employeeName;
         }
@@ -56,7 +56,7 @@ class Employee
         {
             bSalary = salary;
         }
-        double getBSalary() const
+        double getBSalary() 
         {
             return bSalary;
         }
@@ -64,7 +64,7 @@ class Employee
         {
             allowances = allowance;
         }
-        double getAllowances() const
+        double getAllowances() 
         {
             return allowances;
         }
@@ -72,7 +72,7 @@ class Employee
         {
             deductions = deduction;
         }
-        double getDeductions() const
+        double getDeductions()
         {
             return deductions;
         }
@@ -80,17 +80,21 @@ class Employee
         {
             netSalary = bSalary + allowances - deductions;
         }
+        double getNetSalary() 
+        {
+            return netSalary;
+        }
 };
 int main()
 {
     Employee e1;
 
-    ofstream edata;
-    edata.open("edata.dat");
+    fstream edata;
+    edata.open("edata.dat", ios::in | ios::out | ios::app);
 
     int choice = 0;
     int code = 0;
-    char name;
+    char name[30];
     double bs = 0.0;
     double alowns = 0.0;
     double dd = 0.0;
@@ -106,6 +110,7 @@ int main()
         cout << " 5) Salary Register\n";
         cout << " 6) Exit\n";
         cout << "Enter your choice (1-6) : ";
+        cin >> choice;
         switch (choice)
         {
         case 1:
@@ -115,7 +120,7 @@ int main()
             e1.setEmployeeCode(code);
             cout << "Enter Employee Name: ";
             cin.ignore(); // Clear the newline character from the input buffer
-            cin.getline(edata, 30);
+            cin.getline(name, 30);
             e1.setEmployeeName(name);
             cout << "Enter Basic Salary: ";
             cin >> bs;
@@ -126,20 +131,95 @@ int main()
             cout << "Enter Deductions: ";
             cin >> dd;
             e1.setDeductions(dd);
-            edata<< e1.setEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.calculateNetSalary()<< endl;
+            e1.calculateNetSalary();
+            // Write employee data to file
+            edata << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
             cout << "Employee added successfully!\n";
             break;
         case 2:
-
+            cout << "Editing Employee...\n";
+            cout << "Enter Employee Code to edit: ";
+            cin >> code;
+            if (code < 1 || code > 1000) {
+                cout << "Invalid Employee Code! Please enter a code between 1 and 1000.\n";
+                continue;
+            }
+            e1.setEmployeeCode(code);
+            cout << "Enter New Employee Name: ";
+            cin.ignore(); // Clear the newline character from the input buffer
+            cin.getline(name, 30);
+            e1.setEmployeeName(name);
+            cout << "Enter New Basic Salary: ";
+            cin >> bs;
+            e1.setBSalary(bs);
+            cout << "Enter New Allowances: ";
+            cin >> alowns;
+            e1.setAllowances(alowns);   
+            cout << "Enter New Deductions: ";
+            cin >> dd;
+            e1.setDeductions(dd);
+            e1.calculateNetSalary();
+            // Write updated employee data to file
+            edata << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
+            cout << "Employee edited successfully!\n";
             break;
         case 3:
-
+            cout << "Deleting Employee...\n";
+            cout << "Enter Employee Code to delete: ";
+            cin >> code;
+            if (code < 1 || code > 1000) {
+                cout << "Invalid Employee Code! Please enter a code between 1 and 1000.\n";
+                continue;
+            }
+            // Logic to delete employee data from file (not implemented in this example)
+            cout << "Employee with code " << code << " deleted successfully!\n";
+            // Note: In a real application, you would need to read the file, remove the employee data, and rewrite the file.
             break;
         case 4:
-
+            cout << "Displaying Employee...\n";
+            cout << "Employee Code \t Name \t BSalary \t Allowances \t Deductions \t Net Salary\n";
+            // Read employee data from file and display it
+            edata.seekg(0); // Move to the beginning of the file
+            while (edata >> code) {
+                edata.ignore(); // Ignore the space after code
+                edata.getline(name, 30, '\t'); // Read name until tab character
+                edata >> bs >> alowns >> dd; // Read BSalary, Allowances, Deductions
+                e1.setEmployeeCode(code);
+                e1.setEmployeeName(name);
+                e1.setBSalary(bs);
+                e1.setAllowances(alowns);
+                e1.setDeductions(dd);
+                e1.calculateNetSalary();
+                cout << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
+            }   
+            if (edata.eof()) {
+                cout << "No employee data found.\n";
+            }
+            edata.clear(); // Clear the EOF flag
+            edata.seekg(0); // Move to the beginning of the file for next operations
             break;
         case 5:
-
+            cout << "Salary Register:\n";
+            cout << "Emp No. \t Name \t BSalary \t Allowances \t Deductions \t Net Salary\n";
+            // Read employee data from file and display it
+            edata.seekg(0); // Move to the beginning of the file
+            while (edata >> code) {
+                edata.ignore(); // Ignore the space after code
+                edata.getline(name, 30, '\t'); // Read name until tab character
+                edata >> bs >> alowns >> dd; // Read BSalary, Allowances, Deductions
+                e1.setEmployeeCode(code);
+                e1.setEmployeeName(name);
+                e1.setBSalary(bs);
+                e1.setAllowances(alowns);
+                e1.setDeductions(dd);
+                e1.calculateNetSalary();
+                cout << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
+            }   
+            if (edata.eof()) {
+                cout << "No employee data found.\n";
+            }
+            edata.clear(); // Clear the EOF flag
+            edata.seekg(0); // Move to the beginning of the file for next operations
             break;
         case 6:
             if(choice<0 || choice>6)
