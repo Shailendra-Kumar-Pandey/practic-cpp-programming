@@ -25,6 +25,8 @@ Emp No.     Name       Bsalary      Allowances        Deductions       Net Salar
 */
 #include<iostream>
 #include<fstream>
+#include<cstring>
+#include<cstdlib>
 using namespace std;
 class Employee
 {
@@ -46,6 +48,8 @@ class Employee
         }
         void setEmployeeName(const char *name)
         {
+            strncpy(employeeName, name, sizeof(employeeName) - 1);
+            employeeName[sizeof(employeeName) - 1] = '\0'; // Ensure null termination
 
         }
         const char* getEmployeeName() 
