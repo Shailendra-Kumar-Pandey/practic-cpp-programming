@@ -50,9 +50,8 @@ class Employee
         {
             strncpy(employeeName, name, sizeof(employeeName) - 1);
             employeeName[sizeof(employeeName) - 1] = '\0'; // Ensure null termination
-
         }
-        const char* getEmployeeName() 
+        const char* getEmployeeName()
         {
             return employeeName;
         }
@@ -60,7 +59,7 @@ class Employee
         {
             bSalary = salary;
         }
-        double getBSalary() 
+        double getBSalary()
         {
             return bSalary;
         }
@@ -68,7 +67,7 @@ class Employee
         {
             allowances = allowance;
         }
-        double getAllowances() 
+        double getAllowances()
         {
             return allowances;
         }
@@ -84,7 +83,7 @@ class Employee
         {
             netSalary = bSalary + allowances - deductions;
         }
-        double getNetSalary() 
+        double getNetSalary()
         {
             return netSalary;
         }
@@ -158,7 +157,7 @@ int main()
             e1.setBSalary(bs);
             cout << "Enter New Allowances: ";
             cin >> alowns;
-            e1.setAllowances(alowns);   
+            e1.setAllowances(alowns);
             cout << "Enter New Deductions: ";
             cin >> dd;
             e1.setDeductions(dd);
@@ -195,7 +194,7 @@ int main()
                 e1.setDeductions(dd);
                 e1.calculateNetSalary();
                 cout << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
-            }   
+            }
             if (edata.eof()) {
                 cout << "No employee data found.\n";
             }
@@ -218,7 +217,7 @@ int main()
                 e1.setDeductions(dd);
                 e1.calculateNetSalary();
                 cout << e1.getEmployeeCode() << " \t " << e1.getEmployeeName() << " \t " << e1.getBSalary() << " \t " << e1.getAllowances() << " \t " << e1.getDeductions() << " \t " << e1.getNetSalary() << endl;
-            }   
+            }
             if (edata.eof()) {
                 cout << "No employee data found.\n";
             }
